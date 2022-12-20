@@ -10,4 +10,4 @@ Write ROS2 launch file from simple to more complex
 
 ## gazebo
 - [basic gazebo launch](launch/gazebo/gazebo.launch.py)
-- [gazebo with environment variable]()
+- [gazebo with environment variable](launch/gazebo/gazebo_with_env.launch.py)
