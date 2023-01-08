@@ -7,12 +7,19 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED)
 
 install(
-  DIRECTORY launch worlds
+  DIRECTORY launch worlds pkg_launch_tutorial
   DESTINATION share/${PROJECT_NAME}
 )
+# Install Python modules
+ament_python_install_package(${PROJECT_NAME})
 
-
+# Install Python executables
+install(PROGRAMS
+    pkg_launch_tutorial/minimal_node.py
+    DESTINATION lib/${PROJECT_NAME}
+    )
 
 ament_package()
